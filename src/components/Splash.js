@@ -1,12 +1,16 @@
 import React, { Component } from "react";
-import { View, Text } from "react-native";
+import { StatusBar } from "react-native";
+import { Container, Spinner, Text } from "native-base";
+import styles from "../assets/styles";
 class Splash extends Component {
   state = {};
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <Text>Splash screen</Text>
-      </View>
+      <Container style={styles.index.splashContainer}>
+        <StatusBar backgroundColor="#2c3e50" barStyle="light-content" />
+        <Spinner />
+        <Text style={styles.index.splashText}>مجله آموزشی سیاوش</Text>
+      </Container>
     );
   }
 }

@@ -1,13 +1,27 @@
 import React, { Component } from "react";
 import { View, Text } from "react-native";
+import Splash from "./Splash";
+import Home from "./Home";
+import Login from "./Login";
 class Application extends Component {
-  state = {};
+  componentWillMount() {
+    this.state = {
+      view: <Splash />
+    };
+    setTimeout(() => {
+      if (false) {
+        this.setState({
+          view: <Home />
+        });
+      } else {
+        this.setState({
+          view: <Login />
+        });
+      }
+    });
+  }
   render() {
-    return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <Text>Application page</Text>
-      </View>
-    );
+    return this.state.view;
   }
 }
 
