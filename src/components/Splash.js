@@ -8,8 +8,8 @@ class Splash extends Component {
     return (
       <Container style={styles.index.splashContainer}>
         <StatusBar backgroundColor="#2c3e50" barStyle="light-content" />
-        <Spinner />
         <Text style={styles.index.splashText}>مجله آموزشی سیاوش</Text>
+        <Spinner />
       </Container>
     );
   }

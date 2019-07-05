@@ -13,6 +13,7 @@ import {
   Input
 } from "native-base";
 import { form } from "../assets/styles";
+import { Actions } from "react-native-router-flux";
 class Login extends Component {
   state = {};
   render() {
@@ -49,7 +50,11 @@ class Login extends Component {
             </Item>
             <Text style={form.error}>پر کردن این فیلد الزامی است!</Text>
 
-            <Button full style={form.submitButton}>
+            <Button
+              full
+              style={form.submitButton}
+              onPress={() => Actions.loginLightbox()}
+            >
               <Text style={form.submitText}>ورود</Text>
             </Button>
           </Form>

@@ -18,7 +18,7 @@ class Application extends Component {
           view: <Login />
         });
       }
-    });
+    }, 2000);
   }
   render() {
     return this.state.view;
